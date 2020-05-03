@@ -8,7 +8,7 @@
     "delete:reports": "rmdir .\\cypress\\results /q /s",
     "prereport": "npm run delete:reports",
     "report": "node_modules/.bin/cypress run --headed --browser=chrome  --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
-	"postreport" : "junit-merge -d .\cypress\results -o .\cypress\results\merged.xml"
+    "postreport" : "junit-merge -d .\\cypress\\results -o .\\cypress\\results\\merged.xml"
   },
   "author": "Mohit Agarwal",
   "license": "ISC",
