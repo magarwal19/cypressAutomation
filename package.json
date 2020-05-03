@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules\\.bin\\cypress run",
     "delete:reports": "rmdir .\\cypress\\results /q /s",
-    "prereport": "npm run delete:reports",
-    "report": "node_modules/.bin/cypress run --headed --browser=chrome  --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
-    "postreport" : "junit-merge -d ./cypress/results -o ./cypress/results/merged.xml"
+    "testwithreport": "node_modules\\.bin\\cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "mergereport": "junit-merge -d ./cypress/results -o ./cypress/results/merged.xml"
   },
   "author": "Mohit Agarwal",
   "license": "ISC",
