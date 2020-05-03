@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "delete:reports": "rmdir .\\cypress\\results /q /s",
+    "pretestwithreport": "npm run delete:reports",
     "testwithreport": "node_modules\\.bin\\cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
     "mergereport": "junit-merge -d ./cypress/results -o ./cypress/results/merged.xml"
   },
