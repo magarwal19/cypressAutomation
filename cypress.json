@@ -1,0 +1,18 @@
+{
+  "defaultCommandTimeout": 6000,
+  "pageLoadTimeout": 10000,
+  "env": {
+    "qa": {
+      "url": "https://rahulshettyacademy.com/"
+    },
+    "dev": {
+      "url": "https://google.com/"
+    },
+    "env": "qa"
+  },
+  "projectId": "9z6kmp",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

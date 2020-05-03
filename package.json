@@ -1,0 +1,23 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete:reports": "rmdir .\\cypress\\results /q /s",
+    "prereport": "npm run delete:reports",
+    "report": "node_modules/.bin/cypress run --headed --browser=chrome  --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
+  },
+  "author": "Mohit Agarwal",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.5.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-multi-reporters": "^1.2.4",
+    "junit-merge": "^2.0.0",
+    "junit-report-merger": "0.0.6",
+    "mocha-junit-reporter": "^1.23.3",
+    "xunit-viewer": "^6.2.1"
+  }
+}
